@@ -1,0 +1,269 @@
+# Addition operator_____________
+
+#===================================================================#
+
+# INT + INT.................
+print(10 + 20)                              # 30
+
+# INT + FLOAT.................
+print(10 + 20.5)                            # 30.5
+
+# INT + COMPLEX.................
+print(10 + (5+2j))                          # (15+2j)
+
+# INT + BOOL.................
+print(10 + True)                            # 11
+
+# INT + STRING.................
+print(10 + "Python")                        # TypeError
+
+# INT + LIST.................
+print(10 + [10, 20])                        # TypeError
+
+# INT + TUPLE.................
+print(10 + (10, 20))                        # TypeError
+
+# INT + SET.................
+print(10 + {10, 20})                        # TypeError
+
+# INT + DICTIONARY.................
+print(10 + {"a": 10})                       # TypeError
+
+#===================================================================#
+
+# FLOAT + INT.................
+print(10.5 + 20)                            # 30.5
+
+# FLOAT + FLOAT.................
+print(10.5 + 20.5)                          # 31.0
+
+# FLOAT + COMPLEX.................
+print(10.5 + (5+2j))                        # (15.5+2j)
+
+# FLOAT + BOOL.................
+print(10.5 + True)                          # 11.5
+
+# FLOAT + STRING.................
+print(10.5 + "Python")                      # TypeError
+
+# FLOAT + LIST.................
+print(10.5 + [10, 20])                      # TypeError
+
+# FLOAT + TUPLE.................
+print(10.5 + (10, 20))                      # TypeError
+
+# FLOAT + SET.................
+print(10.5 + {10, 20})                      # TypeError
+
+# FLOAT + DICTIONARY.................
+print(10.5 + {"a": 10})                     # TypeError
+
+#===================================================================#
+
+
+# COMPLEX + INT.................
+print((5+2j) + 10)                          # (15+2j)
+
+# COMPLEX + FLOAT.................
+print((5+2j) + 10.5)                        # (15.5+2j)
+
+# COMPLEX + COMPLEX.................
+print((5+2j) + (10+5j))                     # (15+7j)
+
+# COMPLEX + BOOL.................
+print((5+2j) + True)                        # (6+2j)
+
+# COMPLEX + STRING.................
+print((5+2j) + "Python")                    # TypeError
+
+# COMPLEX + LIST.................
+print((5+2j) + [10, 20])                    # TypeError
+
+# COMPLEX + TUPLE.................
+print((5+2j) + (10, 20))                    # TypeError
+
+# COMPLEX + SET.................
+print((5+2j) + {10, 20})                    # TypeError
+
+# COMPLEX + DICTIONARY.................
+print((5+2j) + {"a": 10})                   # TypeError
+
+#===================================================================#
+
+
+# BOOL + INT.................
+print(True + 10)                            # 11
+
+# BOOL + FLOAT.................
+print(True + 10.5)                          # 11.5
+
+# BOOL + COMPLEX.................
+print(True + (5+2j))                        # (6+2j)
+
+# BOOL + BOOL.................
+print(True + False)                         # 1
+
+# BOOL + STRING.................
+print(True + "Python")                      # TypeError
+
+# BOOL + LIST.................
+print(True + [10, 20])                      # TypeError
+
+# BOOL + TUPLE.................
+print(True + (10, 20))                      # TypeError
+
+# BOOL + SET.................
+print(True + {10, 20})                      # TypeError
+
+# BOOL + DICTIONARY.................
+print(True + {"a": 10})                     # TypeError
+
+#===================================================================#
+
+
+# STRING + INT.................
+print("Hello" + 10)                         # TypeError
+
+# STRING + FLOAT.................
+print("Hello" + 10.5)                       # TypeError
+
+# STRING + COMPLEX.................
+print("Hello" + (5+2j))                     # TypeError
+
+# STRING + BOOL.................
+print("Hello" + True)                       # TypeError
+
+# STRING + STRING.................
+print("Hello" + "Python")                   # HelloPython
+
+# STRING + LIST.................
+print("Hello" + [10, 20])                   # TypeError
+
+# STRING + TUPLE.................
+print("Hello" + (10, 20))                   # TypeError
+
+# STRING + SET.................
+print("Hello" + {10, 20})                   # TypeError
+
+# STRING + DICTIONARY.................
+print("Hello" + {"a": 10})                  # TypeError
+
+#===================================================================#
+
+# LIST + INT.................
+print([10, 20] + 10)                        # TypeError
+
+# LIST + FLOAT.................
+print([10, 20] + 10.5)                      # TypeError
+
+# LIST + COMPLEX.................
+print([10, 20] + (5+2j))                    # TypeError
+
+# LIST + BOOL.................
+print([10, 20] + True)                      # TypeError
+
+# LIST + STRING.................
+print([10, 20] + "Hello")                   # TypeError
+
+# LIST + LIST.................
+print([10, 20] + [30, 40])                  # [10, 20, 30, 40]
+
+# LIST + TUPLE.................
+print([10, 20] + (30, 40))                  # TypeError
+
+# LIST + SET.................
+print([10, 20] + {30, 40})                  # TypeError
+
+# LIST + DICTIONARY.................
+print([10, 20] + {"a": 10})                 # TypeError
+
+#===================================================================#
+
+# TUPLE + INT.................
+print((10, 20) + 10)                        # TypeError
+
+# TUPLE + FLOAT.................
+print((10, 20) + 10.5)                      # TypeError
+
+# TUPLE + COMPLEX.................
+print((10, 20) + (5+2j))                    # TypeError
+
+# TUPLE + BOOL.................
+print((10, 20) + True)                      # TypeError
+
+# TUPLE + STRING.................
+print((10, 20) + "Hello")                   # TypeError
+
+# TUPLE + LIST.................
+print((10, 20) + [30, 40])                  # TypeError
+
+# TUPLE + TUPLE.................
+print((10, 20) + (30, 40))                  # (10, 20, 30, 40)
+
+# TUPLE + SET.................
+print((10, 20) + {30, 40})                  # TypeError
+
+# TUPLE + DICTIONARY.................
+print((10, 20) + {"a": 10})                 # TypeError
+
+#===================================================================#
+
+# SET + INT.................
+print({10, 20} + 10)                        # TypeError
+
+# SET + FLOAT.................
+print({10, 20} + 10.5)                      # TypeError
+
+# SET + COMPLEX.................
+print({10, 20} + (5+2j))                    # TypeError
+
+# SET + BOOL.................
+print({10, 20} + True)                      # TypeError
+
+# SET + STRING.................
+print({10, 20} + "Hello")                   # TypeError
+
+# SET + LIST.................
+print({10, 20} + [30, 40])                  # TypeError
+
+# SET + TUPLE.................
+print({10, 20} + (30, 40))                  # TypeError
+
+# SET + SET.................
+print({10, 20} + {30, 40})                  # TypeError
+
+# SET + DICTIONARY.................
+print({10, 20} + {"a": 10})                 # TypeError
+
+#===================================================================#
+
+# DICTIONARY + INT.................
+print({"a": 10} + 10)                       # TypeError
+
+# DICTIONARY + FLOAT.................
+print({"a": 10} + 10.5)                     # TypeError
+
+# DICTIONARY + COMPLEX.................
+print({"a": 10} + (5+2j))                   # TypeError
+
+# DICTIONARY + BOOL.................
+print({"a": 10} + True)                     # TypeError
+
+# DICTIONARY + STRING.................
+print({"a": 10} + "Hello")                  # TypeError
+
+# DICTIONARY + LIST.................
+print({"a": 10} + [10, 20])                 # TypeError
+
+# DICTIONARY + TUPLE.................
+print({"a": 10} + (10, 20))                 # TypeError
+
+# DICTIONARY + SET.................
+print({"a": 10} + {10, 20})                 # TypeError
+
+# DICTIONARY + DICTIONARY.................
+print({"a": 10} + {"b": 20})                # TypeError
+
+
+#===================================================================#
+
