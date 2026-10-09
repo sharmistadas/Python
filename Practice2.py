@@ -15,7 +15,7 @@ else:
 
 
 # OUTPUT 1: VALID DATA
-# Enter a number: 150
+# Enter a number: 150  
 # Positive and greater than 100
 
 # OUTPUT 2: INVALID DATA
