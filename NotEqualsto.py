@@ -1,5 +1,5 @@
 # Not Equal to (!=) operator
-#===================================================================#
+
 
 # INT != INT
 print(10 != 20)                    # True
@@ -28,10 +28,9 @@ print({10, 20} != {30, 40})        # True
 # DICTIONARY != DICTIONARY
 print({"a": 10} != {"b": 20})      # True
 
-#===================================================================#
 
 print(10 != 20)        # True
 print(10 != 10)        # False
 
 print("Python" != "Java")      # True
-print("Python" != "Python")    # False
+print("Python" != "Python")    # false
