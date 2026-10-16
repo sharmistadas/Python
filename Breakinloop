@@ -1,0 +1,48 @@
+#! Q1. WAP to stop the loop only if username and password are correct
+
+un = "Lakshmi Anuty"
+pswd = "Jilebi@123"
+
+while True:
+    username = input("Enter the username: ")
+    password = input("Enter the password: ")
+
+    if username == un:
+        if password == pswd:
+            print("Login Successfully")
+            break
+        else:
+            print("Incorrect password")
+    else:
+        print("Incorrect username")
+
+# Output:
+# Enter the username: Lakshmi Anuty
+# Enter the password: Jilebi@123
+# Login Successfully
+
+
+#! Q2. WAP to guess a number
+
+import random
+
+num = random.randint(0, 99)
+
+while True:
+    guess = int(input("Enter the number: "))
+
+    if num == guess:
+        print("Congrats! You guessed the correct number.")
+        break
+    elif num > guess:
+        print("You guessed less than the actual number")
+    else:
+        print("You guessed more than the actual number")
+
+# Sample Output:
+# Enter the number: 25
+# You guessed less than the actual number
+# Enter the number: 70
+# You guessed more than the actual number
+# Enter the number: 48
+# Congrats! You guessed the correct number.
