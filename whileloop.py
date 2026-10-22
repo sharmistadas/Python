@@ -45,6 +45,7 @@ while i <= n:
     total = total + i
     i += 1
 
+
 print("Sum =", total)
 
 # Output:
