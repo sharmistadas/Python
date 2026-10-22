@@ -3,6 +3,7 @@
 un = "Lakshmi Anuty"
 pswd = "Jilebi@123"
 
+
 while True:
     username = input("Enter the username: ")
     password = input("Enter the password: ")
@@ -38,6 +39,9 @@ while True:
         print("You guessed less than the actual number")
     else:
         print("You guessed more than the actual number")
+
+
+
 
 # Sample Output:
 # Enter the number: 25
