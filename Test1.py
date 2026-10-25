@@ -286,3 +286,91 @@ if total == n:
     print("Disarium Number")
 else:
     print("Not a Disarium Number")
+
+
+
+
+
+
+
+
+
+
+
+# ==================================================
+# EXPLANATION OF 8 SPECIAL NUMBER PROGRAMS
+# ==================================================
+
+# Q1. SPY NUMBER
+# A number is Spy if the sum of its digits equals
+# the product of its digits.
+# Example: 1124
+# Sum = 1 + 1 + 2 + 4 = 8
+# Product = 1 * 1 * 2 * 4 = 8
+# Since sum == product, it is a Spy Number.
+
+
+# Q2. DUCK NUMBER
+# A positive number is Duck if it contains at least
+# one zero and does not start with zero.
+# Example: 1023
+# It contains zero, so it is a Duck Number.
+
+
+# Q3. AUTOMORPHIC NUMBER
+# A number is Automorphic if its square ends with
+# the original number.
+# Example: 25 * 25 = 625
+# The last two digits are 25, so it is Automorphic.
+
+
+# Q4. TRIMORPHIC NUMBER
+# A number is Trimorphic if its cube ends with
+# the original number.
+# Example: 24 * 24 * 24 = 13824
+# The last two digits are 24, so it is Trimorphic.
+
+
+# Q5. NEON NUMBER
+# A number is Neon if the sum of the digits of its
+# square equals the original number.
+# Example: 9 * 9 = 81
+# Sum = 8 + 1 = 9
+# Therefore, 9 is a Neon Number.
+
+
+# Q6. HARSHAD NUMBER
+# A number is Harshad if it is divisible by the
+# sum of its digits without a remainder.
+# Example: 18
+# Sum = 1 + 8 = 9
+# 18 % 9 = 0, so it is a Harshad Number.
+
+
+# Q7. PRONIC NUMBER
+# A number is Pronic if it is the product of two
+# consecutive non-negative integers.
+# Example: 6 * 7 = 42
+# Therefore, 42 is a Pronic Number.
+
+
+# Q8. DISARIUM NUMBER
+# A number is Disarium if the sum of its digits
+# raised to their positions from left to right
+# equals the original number.
+# Example: 135
+# 1**1 + 3**2 + 5**3 = 1 + 9 + 125 = 135
+# Therefore, 135 is a Disarium Number.
+
+
+# ==================================================
+# QUICK REVISION
+# Spy        -> Sum of digits = Product of digits
+# Duck       -> Contains at least one zero
+# Automorphic-> Square ends with the number
+# Trimorphic -> Cube ends with the number
+# Neon       -> Sum of square digits = number
+# Harshad    -> Number divisible by digit sum
+# Pronic     -> Product of consecutive integers
+# Disarium   -> Sum of positional powers = number
+# ==================================================
