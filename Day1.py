@@ -32,7 +32,6 @@ else:
     print("Odd")
 
 
-
 # # 5. Check whether a number is positive or not positive.
 
 num=int(input("Enter a number"))
