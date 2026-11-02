@@ -1,11 +1,11 @@
 #function without arg without return type
 
-# def add():
-#     a=int(input("enter the number: "))
-#     b=int(input("enter the number: "))
-#     print(a+b)
-# add()
-# add()    
+def add():
+    a=int(input("enter the number: "))
+    b=int(input("enter the number: "))
+    print(a+b)
+add()
+add() 
     
 '''
 enter the number: 12
