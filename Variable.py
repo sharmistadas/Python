@@ -1,247 +1,355 @@
-# ==============================================================================
-# 1. VARIABLE-LENGTH POSITIONAL ARGUMENTS (*args)
-# ==============================================================================
-
-# Ex 1: Print user-entered values
-def add(*args):
-    print(args)
-
-add(10, 30)
-# Output: (10, 30)[span_0](start_span)[span_0](end_span)
-
-add(4, 5, 2)
-# Output: (4, 5, 2)[span_1](start_span)[span_1](end_span)
-
-add(10, 40, 20, 10, 50)
-# Output: (10, 40, 20, 10, 50)[span_2](start_span)[span_2](end_span)
-
-add("hello", "world")
-# Output: ('hello', 'world')[span_3](start_span)[span_3](end_span)
 
 
-# Ex 2: WAP to add user-entered values
-def sum_values(*args):
+# DEFINITION:
+# Variable scope defines where a variable can be accessed
+# and used in a Python program.
+
+# ============================================================
+# 1. LOCAL VARIABLE
+# ============================================================
+
+# DEFINITION:
+# A variable created inside a function is called a local variable.
+# It can be accessed only inside that function.
+
+# Q1. Create a local variable and print it.
+def student():
+    name = "Rahul"
+    print("Student Name:", name)
+
+student()
+
+# Output: Student Name: Rahul
+# Explanation:
+# name is created inside the function.
+# So, it is a local variable and can be accessed inside student().
+
+
+# Q2. Create two local variables and calculate their sum.
+def add():
+    a = 10
+    b = 20
+    print("Sum:", a + b)
+
+add()
+
+# Output: Sum: 30
+# Explanation:
+# a and b are local variables.
+# They can be used only inside the add() function.
+
+
+# Q3. Create a local variable inside a function.
+def employee():
+    salary = 30000
+    print("Salary:", salary)
+
+employee()
+
+# Output: Salary: 30000
+# Explanation:
+# salary is created inside employee().
+# It cannot be directly accessed outside the function.
+
+
+# Q4. Create two functions with the same local variable name.
+def first():
+    x = 100
+    print("First:", x)
+
+def second():
+    x = 200
+    print("Second:", x)
+
+first()
+second()
+
+# Output:
+# First: 100
+# Second: 200
+# Explanation:
+# Both functions have their own local variable x.
+# Changing or creating x in one function does not affect the other.
+
+
+# Q5. Check whether a local variable can be accessed outside.
+def display():
+    message = "Hello Python"
+    print(message)
+
+display()
+
+# print(message)  # NameError
+
+# Output:
+# Hello Python
+# Explanation:
+# message is a local variable.
+# It works inside display(), but cannot be accessed outside it.
+
+
+# ============================================================
+# 2. GLOBAL VARIABLE
+# ============================================================
+
+# DEFINITION:
+# A variable created outside all functions is called a global variable.
+# It can be accessed inside and outside functions.
+# Use the global keyword to modify it inside a function.
+
+# Q1. Create a global variable and access it inside a function.
+name = "Riya"
+
+def student():
+    print("Student Name:", name)
+
+student()
+
+# Output: Student Name: Riya
+# Explanation:
+# name is created outside the function.
+# Therefore, it is a global variable and can be accessed inside student().
+
+
+# Q2. Access a global variable inside and outside a function.
+college = "JSpiders"
+
+def display():
+    print("Inside Function:", college)
+
+display()
+print("Outside Function:", college)
+
+# Output:
+# Inside Function: JSpiders
+# Outside Function: JSpiders
+# Explanation:
+# A global variable can be accessed both inside and outside functions.
+
+
+# Q3. Modify a global variable using the global keyword.
+count = 10
+
+def update():
+    global count
+    count = 20
+    print("Inside:", count)
+
+update()
+print("Outside:", count)
+
+# Output:
+# Inside: 20
+# Outside: 20
+# Explanation:
+# global tells Python to modify the existing global variable,
+# instead of creating a new local variable.
+
+
+# Q4. Create a global variable and calculate its value.
+price = 1000
+
+def calculate():
+    global price
+    price = price + 500
+    print("Updated Price:", price)
+
+calculate()
+
+# Output: Updated Price: 1500
+# Explanation:
+# price is a global variable.
+# The global keyword allows us to update its value inside the function.
+
+
+# Q5. Use a global variable in multiple functions.
+balance = 5000
+
+def deposit():
+    global balance
+    balance = balance + 2000
+    print("After Deposit:", balance)
+
+def withdraw():
+    global balance
+    balance = balance - 1000
+    print("After Withdrawal:", balance)
+
+deposit()
+withdraw()
+
+# Output:
+# After Deposit: 7000
+# After Withdrawal: 6000
+# Explanation:
+# Both functions access and modify the same global variable balance.
+
+
+# ============================================================
+# 3. NONLOCAL VARIABLE
+# ============================================================
+
+# DEFINITION:
+# A nonlocal variable is created in an enclosing (outer) function.
+# It is used inside a nested (inner) function.
+# The nonlocal keyword allows the inner function to modify
+# the variable from the nearest enclosing function scope.
+# It does not refer to a global variable.
+
+# Q1. Access a nonlocal variable inside a nested function.
+def outer():
+    name = "Rahul"
+
+    def inner():
+        print("Name:", name)
+
+    inner()
+
+outer()
+
+# Output: Name: Rahul
+# Explanation:
+# name is created in outer().
+# inner() can access it because it is inside the outer function.
+
+
+# Q2. Modify a nonlocal variable.
+def outer():
+    count = 10
+
+    def inner():
+        nonlocal count
+        count = 20
+        print("Inner:", count)
+
+    inner()
+    print("Outer:", count)
+
+outer()
+
+# Output:
+# Inner: 20
+# Outer: 20
+# Explanation:
+# nonlocal allows inner() to modify count from outer().
+# Both print statements show the updated value.
+
+
+# Q3. Increase a value using nonlocal.
+def counter():
+    number = 0
+
+    def increment():
+        nonlocal number
+        number = number + 1
+        print("Count:", number)
+
+    increment()
+    increment()
+    increment()
+
+counter()
+
+# Output:
+# Count: 1
+# Count: 2
+# Count: 3
+# Explanation:
+# Each time increment() runs, it updates the number
+# variable belonging to counter().
+
+
+# Q4. Create a shopping cart using nonlocal.
+def shopping():
     total = 0
-    for i in args:
-        total += i
-    print(total)
 
-sum_values(10, 30)
-# Output: 40[span_4](start_span)[span_4](end_span)
+    def add_item(price):
+        nonlocal total
+        total = total + price
+        print("Current Total:", total)
 
-sum_values(4, 5, 2)
-# Output: 11[span_5](start_span)[span_5](end_span)
+    add_item(100)
+    add_item(200)
+    add_item(300)
 
-sum_values(10, 40, 20, 10, 50)
-# Output: 130[span_6](start_span)[span_6](end_span)
+shopping()
 
-
-# ==============================================================================
-# 2. VARIABLE-LENGTH KEYWORD ARGUMENTS (**kwargs)
-# ==============================================================================
-
-# Ex 1: Print user-entered values
-def func_kwargs(**kwargs):
-    print(kwargs)
-
-func_kwargs(a="adhipurush", b="brahmotsavam", c="chennai love story")
-# Output: {'a': 'adhipurush', 'b': 'brahmotsavam', 'c': 'chennai love story'}[span_7](start_span)[span_7](end_span)
-
-func_kwargs(d=["devara", "dhammu"], e="eswar", f="funky")
-# Output: {'d': ['devara', 'dhammu'], 'e': 'eswar', 'f': 'funky'}[span_8](start_span)[span_8](end_span)
-
-# Error Example: Takes 0 positional arguments
-# func_kwargs("gamechanger", "spyder")
-# Output: TypeError: func() takes 0 positional arguments but 2 were given[span_9](start_span)[span_9](end_span)
-
-
-# Ex 2: WAP to print total bill for DMart shopping
-def dmart(**items):
-    print("Welcome to Dmart")
-    print("Items   price")
-    price = 0
-    for i in items:
-        print(i, items[i], sep="   ")
-        price += items[i]
-
-    gst = 18
-    extra_amt = price * gst / 100
-    total_amt = extra_amt + price
-
-    print(f"Total bill with GST --- ₹ {total_amt}/-")
-    print("Thank you \n Visit again")
-
-dmart(chocolate=50, coke=40, vim=30)
 # Output:
-# Welcome to Dmart[span_10](start_span)[span_10](end_span)
-# Items   price[span_11](start_span)[span_11](end_span)
-# chocolate   50[span_12](start_span)[span_12](end_span)
-# coke   40[span_13](start_span)[span_13](end_span)
-# vim   30[span_14](start_span)[span_14](end_span)
-# Total bill with GST --- ₹ 141.6/-[span_15](start_span)[span_15](end_span)
-# Thank you[span_16](start_span)[span_16](end_span)
-#  Visit again[span_17](start_span)[span_17](end_span)
+# Current Total: 100
+# Current Total: 300
+# Current Total: 600
+# Explanation:
+# total belongs to shopping().
+# add_item() modifies the same total using nonlocal.
 
 
-# ==============================================================================
-# 3. COMBINATION OF POSITIONAL AND KEYWORD ARGUMENTS (*args, **kwargs)
-# ==============================================================================
+# Q5. Modify a student's marks using nonlocal.
+def student():
+    marks = 70
 
-# Ex 1: WAP to order in Blinkit & print total bill
-def blinkit(name, *address, **items):
-    delivery_charges = 40
-    handling_fee = 3
+    def update_marks():
+        nonlocal marks
+        marks = marks + 20
+        print("Updated Marks:", marks)
 
-    print(f"Hello {name}")
-    print("Confirm your order")
-    print("product   price")
+    update_marks()
+    print("Final Marks:", marks)
 
-    price = 0
-    for i in items:
-        print(i, items[i], sep="   ")
-        price += items[i]
+student()
 
-    if price >= 250:
-        total_amt = price + handling_fee
-    else:
-        total_amt = price + handling_fee + delivery_charges
-
-    print(f"Total Amount to pay : ₹ {total_amt}/-")
-    print("confirm address")
-
-    l = list(address)
-    print(f"Delivery Address : {' '.join(l)}")
-
-blinkit(
-    "smithika",
-    "3-45", "#26", "6th main 2phase Jntu", "hyd", "500078",
-    paste=30, diet_coke=60, chocolate=100, soap=30, shampoo=250,
-    notes=50, eggs=200, boost=350, milk=36
-)
 # Output:
-# Hello smithika[span_18](start_span)[span_18](end_span)
-# Confirm your order[span_19](start_span)[span_19](end_span)
-# product   price[span_20](start_span)[span_20](end_span)
-# paste   30[span_21](start_span)[span_21](end_span)
-# diet_coke   60[span_22](start_span)[span_22](end_span)
-# chocolate   100[span_23](start_span)[span_23](end_span)
-# soap   30[span_24](start_span)[span_24](end_span)
-# shampoo   250[span_25](start_span)[span_25](end_span)
-# notes   50[span_26](start_span)[span_26](end_span)
-# eggs   200[span_27](start_span)[span_27](end_span)
-# boost   350[span_28](start_span)[span_28](end_span)
-# milk   36[span_29](start_span)[span_29](end_span)
-# Total Amount to pay : ₹ 1109/-[span_30](start_span)[span_30](end_span)
-# confirm address[span_31](start_span)[span_31](end_span)
-# Delivery Address : 3-45 #26 6th main 2phase Jntu hyd 500078[span_32](start_span)[span_32](end_span)
+# Updated Marks: 90
+# Final Marks: 90
+# Explanation:
+# marks is created in the outer function.
+# The inner function modifies it using nonlocal.
 
 
-# ==============================================================================
-# 4. DEFAULT ARGUMENTS
-# ==============================================================================
+# ============================================================
+# QUICK REVISION – DIFFERENCE BETWEEN 3 SCOPES
+# ============================================================
 
-# Ex 1: Missing required arguments
-def add_three(a, b, c):
-    print(f"a: {a}  b: {b}  c: {c}  addition: {a + b + c}")
+# 1. LOCAL VARIABLE:
+# Created inside a function.
+# Accessible only within its function.
 
-# add_three(2, 4)
-# Output: TypeError: add() missing 1 required positional argument: 'c[span_33](start_span)'[span_33](end_span)
+# 2. GLOBAL VARIABLE:
+# Created outside all functions.
+# Accessible inside and outside functions.
+# Use global keyword to modify it inside a function.
 
+# 3. NONLOCAL VARIABLE:
+# Created inside an outer function.
+# Used inside a nested inner function.
+# Use nonlocal keyword to modify it.
 
-# Ex 2: Functions with default parameters
-def add_defaults(a=10, b=20, c=30):
-    print(f"a: {a}  b: {b}  c: {c}  addition: {a + b + c}")
+# ============================================================
+# IMPORTANT INTERVIEW QUESTIONS
+# ============================================================
 
-add_defaults()
-# Output: a: 10  b: 20  c: 30  addition: 60[span_34](start_span)[span_34](end_span)
+# Q1. What is a local variable?
+# Answer: A variable created inside a function.
 
-add_defaults(35, 60)
-# Output: a: 35  b: 60  c: 30  addition: 125[span_35](start_span)[span_35](end_span)
+# Q2. What is a global variable?
+# Answer: A variable created outside all functions.
 
-add_defaults(c=15)
-# Output: a: 10  b: 20  c: 15  addition: 45[span_36](start_span)[span_36](end_span)
+# Q3. What is a nonlocal variable?
+# Answer: A variable in an enclosing function scope
+#         that can be accessed and modified by a nested function.
 
+# Q4. What is the use of the global keyword?
+# Answer: It allows us to modify a global variable inside a function.
 
-# ==============================================================================
-# 5. VARIABLE SCOPE (Local, Global, Non-local)
-# ==============================================================================
+# Q5. What is the use of the nonlocal keyword?
+# Answer: It allows us to modify a variable from an enclosing function.
 
-# --- Local Scope ---
-def test_local():
-    a = 15
-    print(f"local variable inside function: {a}")
+# Q6. Can we access a local variable outside its function?
+# Answer: No, not directly.
 
-test_local()
-# Output: local variable inside function: 15[span_37](start_span)[span_37](end_span)
+# Q7. Can a global variable be accessed inside a function?
+# Answer: Yes.
 
-# print(f"local variable outside function: {a}")
-# Output: NameError: name 'a' is not defined[span_38](start_span)[span_38](end_span)
+# Q8. Can we use nonlocal outside a nested function?
+# Answer: No. It must refer to a variable in an enclosing function scope.
 
-
-# --- Global Scope Access ---
-global_a = 100
-
-def test_global():
-    print(f"accessing the global variable inside func : {global_a}")
-
-test_global()
-# Output: accessing the global variable inside func : 100[span_39](start_span)[span_39](end_span)
-
-print(f"global variable outside the func : {global_a}")
-# Output: global variable outside the func : 100[span_40](start_span)[span_40](end_span)
-
-
-# --- Global Modification without 'global' keyword ---
-val = 20
-
-def modify_fail():
-    # val += 5
-    pass
-
-# modify_fail()
-# Output: UnboundLocalError: cannot access local variable 'val' where it is not associated with a value[span_41](start_span)[span_41](end_span)
-
-
-# --- Global Modification with 'global' keyword ---
-a_val = 20
-
-def modify():
-    global a_val
-    a_val += 5
-    print(a_val)
-
-modify()
-# Output: 25[span_42](start_span)[span_42](end_span)
-
-print(a_val)
-# Output: 25[span_43](start_span)[span_43](end_span)
-
-
-# --- Banking Simulation Example ---
-bal = 1000
-acc_num = 123456789
-pin = 1432
-
-def deposit(acc, pin_, amt):
-    global bal
-    if acc_num == acc:
-        if pin == pin_:
-            if amt >= 100:
-                bal += amt
-                print("deposited successfully")
-            else:
-                print("bichagadu")
-        else:
-            print("incorrect pin")
-    else:
-        print("acc not found")
-
-deposit(123456789, 1432, 2500)
-# Output: deposited successfully[span_44](start_span)[span_44](end_span)
-
-print(f"Available Balance : {bal}")
-# Output: Available Balance : 3500[span_45](start_span)[span_45](end_span)
-
-
-
-
+# END OF VARIABLE SCOPE NOTES
