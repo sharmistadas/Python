@@ -69,7 +69,7 @@ def after_execution(func):
         print("Keyword Arguments After Execution:", kwargs)
         return result
 
-    return wrapper
+    return wrapper 
 
 
 @after_execution
