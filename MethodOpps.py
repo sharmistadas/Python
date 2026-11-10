@@ -12,6 +12,7 @@ class High_Alert:
             print(f"{city} is not listed as a high-alert city.")
 
 
+
 if __name__ == "__main__":
     High_Alert().smoke_alert()
 
@@ -53,4 +54,3 @@ if __name__ == "__main__":
     e = Emp()
 
     e.in_hand_sal("Rahul", 600000, "Python Developer", 101)
-
