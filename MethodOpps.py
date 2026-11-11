@@ -66,27 +66,60 @@
 #Q3  Create a Student class that takes name and marks of 3 subjects as arguments in the constructor. 
 # Then create amethod to print the average
 
-class Student:
+# class Student:
 
-    def __init__(self, name, sub1, sub2, sub3):
+#     def __init__(self, name, sub1, sub2, sub3):
+#         self.name = name
+#         self.sub1 = sub1
+#         self.sub2 = sub2
+#         self.sub3 = sub3
+
+#     def Avg_mark(self):
+
+#         avg_mark = (self.sub1 + self.sub2 + self.sub3) / 3
+
+#         print("\n")
+#         print(f"Student Name       : {self.name}")
+#         print(f"Subject 1 Marks    : {self.sub1}")
+#         print(f"Subject 2 Marks    : {self.sub2}")
+#         print(f"Subject 3 Marks    : {self.sub3}")
+#         print(f"Your Average Mark  : {avg_mark}")
+
+
+# s1 = Student("Rahul", 80, 90, 60)
+# s1.Avg_mark()
+
+#Q4 Student Class
+# Create a Student class that accepts the following details in the constructor:
+# - Student name
+# - Roll number
+# - Marks of 3 subjects
+# Create a method display() to print all student details.
+
+
+class Student:
+    def __init__(self, name, rollno, sub1, sub2, sub3):
         self.name = name
+        self.rollno = rollno
         self.sub1 = sub1
         self.sub2 = sub2
         self.sub3 = sub3
 
-    def Avg_mark(self):
-
-        avg_mark = (self.sub1 + self.sub2 + self.sub3) / 3
-
-        print("\n")
-        print(f"Student Name       : {self.name}")
-        print(f"Subject 1 Marks    : {self.sub1}")
-        print(f"Subject 2 Marks    : {self.sub2}")
-        print(f"Subject 3 Marks    : {self.sub3}")
-        print(f"Your Average Mark  : {avg_mark}")
+    def display(self):
+        print("\n------Student Details------")
+        print(f"Student Name: {self.name}")
+        print(f"Roll No: {self.rollno}")
+        print(f"Subject 1 marks: {self.sub1}")
+        print(f"Subject 2 marks: {self.sub2}")
+        print(f"Subject 3 marks: {self.sub3}")
 
 
-s1 = Student("Rahul", 80, 90, 60)
-s1.Avg_mark()
+
+S1 = Student("Rahul", 101, 80, 70, 60)
+
+
+S1.display()
+
+    
 
             
