@@ -127,20 +127,42 @@
 # - Employee salary
 # Create a method display() to print all employee details.
 
-class Employee:
-    def __init__ (self, emp_name, emp_id, emp_sal):
-        self.emp_name = emp_name
-        self.emp_id = emp_id
-        self.emp_sal = emp_sal
+# class Employee:
+#     def __init__ (self, emp_name, emp_id, emp_sal):
+#         self.emp_name = emp_name
+#         self.emp_id = emp_id
+#         self.emp_sal = emp_sal
 
-    def display(self):
-        print("\n----- All Employee Details -----")
-        print(f"EMP Name   : {self.emp_name}")
-        print(f"EMP ID     : {self.emp_id}")
-        print(f"EMP Salary : {self.emp_sal}")
+#     def display(self):
+#         print("\n----- All Employee Details -----")
+#         print(f"EMP Name   : {self.emp_name}")
+#         print(f"EMP ID     : {self.emp_id}")
+#         print(f"EMP Salary : {self.emp_sal}")
 
 
-e1 = Employee("Raju", 201, 5000)
-e1.display()
+# e1 = Employee("Raju", 201, 5000)
+# e1.display()
+
+#Q6 Create a Rectangle class that accepts length and breadth as arguments in the constructor.
+# Create two methods:
+# - area() – Calculate and print the area.
+# - perimeter() – Calculate and print the perimeter.
+
+class Rectangle:
+    def __init__ (self, length, breadth):
+        self.length = length
+        self.breadth = breadth
+
+    def area(self):
+        calculated_area = self.length * self.breadth
+        print(f"Area      : {calculated_area}")
+
+    def perimeter(self):
+        calculated_perimeter = 2 * (self.length + self.breadth)
+        print(f"Perimeter : {calculated_perimeter}")
+
+r = Rectangle(50, 30)
+r.area()
+r.perimeter()
 
             
