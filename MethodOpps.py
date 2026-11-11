@@ -97,29 +97,50 @@
 # Create a method display() to print all student details.
 
 
-class Student:
-    def __init__(self, name, rollno, sub1, sub2, sub3):
-        self.name = name
-        self.rollno = rollno
-        self.sub1 = sub1
-        self.sub2 = sub2
-        self.sub3 = sub3
+# class Student:
+#     def __init__(self, name, rollno, sub1, sub2, sub3):
+#         self.name = name
+#         self.rollno = rollno
+#         self.sub1 = sub1
+#         self.sub2 = sub2
+#         self.sub3 = sub3
+
+#     def display(self):
+#         print("\n------Student Details------")
+#         print(f"Student Name: {self.name}")
+#         print(f"Roll No: {self.rollno}")
+#         print(f"Subject 1 marks: {self.sub1}")
+#         print(f"Subject 2 marks: {self.sub2}")
+#         print(f"Subject 3 marks: {self.sub3}")
+
+
+
+# S1 = Student("Rahul", 101, 80, 70, 60)
+
+
+# S1.display()
+
+#Q5 Employee Class
+# Create an Employee class that accepts the following details in the constructor:
+# - Employee name
+# - Employee ID
+# - Employee salary
+# Create a method display() to print all employee details.
+
+class Employee:
+    def __init__ (self, emp_name, emp_id, emp_sal):
+        self.emp_name = emp_name
+        self.emp_id = emp_id
+        self.emp_sal = emp_sal
 
     def display(self):
-        print("\n------Student Details------")
-        print(f"Student Name: {self.name}")
-        print(f"Roll No: {self.rollno}")
-        print(f"Subject 1 marks: {self.sub1}")
-        print(f"Subject 2 marks: {self.sub2}")
-        print(f"Subject 3 marks: {self.sub3}")
+        print("\n----- All Employee Details -----")
+        print(f"EMP Name   : {self.emp_name}")
+        print(f"EMP ID     : {self.emp_id}")
+        print(f"EMP Salary : {self.emp_sal}")
 
 
-
-S1 = Student("Rahul", 101, 80, 70, 60)
-
-
-S1.display()
-
-    
+e1 = Employee("Raju", 201, 5000)
+e1.display()
 
             
