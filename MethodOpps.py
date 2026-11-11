@@ -148,21 +148,50 @@
 # - area() – Calculate and print the area.
 # - perimeter() – Calculate and print the perimeter.
 
-class Rectangle:
-    def __init__ (self, length, breadth):
-        self.length = length
-        self.breadth = breadth
+# class Rectangle:
+#     def __init__ (self, length, breadth):
+#         self.length = length
+#         self.breadth = breadth
 
-    def area(self):
-        calculated_area = self.length * self.breadth
-        print(f"Area      : {calculated_area}")
+#     def area(self):
+#         calculated_area = self.length * self.breadth
+#         print(f"Area      : {calculated_area}")
 
-    def perimeter(self):
-        calculated_perimeter = 2 * (self.length + self.breadth)
-        print(f"Perimeter : {calculated_perimeter}")
+#     def perimeter(self):
+#         calculated_perimeter = 2 * (self.length + self.breadth)
+#         print(f"Perimeter : {calculated_perimeter}")
 
-r = Rectangle(50, 30)
-r.area()
-r.perimeter()
+# r = Rectangle(50, 30)
+# r.area()
+# r.perimeter()
+
+
+#Q7 Create a BankAccount class that accepts the following details in the constructor:
+# - Account holder name
+# - Account number
+# - Initial balance
+# Create two methods:
+# - deposit() – Add an amount to the existing balance and print the updated balance.
+# - display() – Print account holder name, account number and balance.
+
+class BankAccount:
+    def __init__ (self, acc_holder_name, acc_no, initial_balance):
+        self.acc_holder_name = acc_holder_name
+        self.acc_no = acc_no
+        self.balance = initial_balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Updated Balance: {self.balance}")
+
+    def display(self):
+        print("\n--- Account Details ---")
+        print(f"Account Holder Name : {self.acc_holder_name}")
+        print(f"Account Number      : {self.acc_no}")
+        print(f"Account Balance     : {self.balance}")
+
+account = BankAccount("Rahul Sharma", "123456789", 5000)
+account.display()
+account.deposit(2000)
 
             
