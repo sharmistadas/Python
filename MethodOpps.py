@@ -192,8 +192,8 @@ class BankAccount:
         print(f"Account Number      : {self.acc_no}")
         print(f"Account Balance     : {self.balance}")
 
-account = BankAccount("Rahul Sharma", "123456789", 5000)
+
+account = BankAccount("Rahul Sharma" , "123456789", 5000)
 account.display()
 account.deposit(2000)
-
             
