@@ -36,9 +36,13 @@ class Sample:
 s = Sample()
 s1 = Sample()
 
+
+
 print("\nQ2: CLASS VARIABLE MODIFICATION")
 print(Sample.a, s.a, s1.a)
 print(Sample.b, s.b, s1.b)
+
+
 
 # Modifying class variable
 Sample.a = 120
@@ -47,6 +51,8 @@ print(Sample.a, s.a, s1.a)
 # Adding new class variable
 Sample.c = "happy diwali"
 print(Sample.c, s.c, s1.c)
+
+
 
 # Output:
 # 10 10 10
