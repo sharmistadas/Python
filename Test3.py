@@ -144,3 +144,51 @@
 # Employee ID: 101
 # Basic Salary: 30000
 # Final Salary: 39000.0
+
+#Q4 
+
+class ShoppingCart:
+    def __init__(self, customer_name, product_name, price, quantity):
+        self.customer_name = customer_name
+        self.product_name = product_name
+        self.price = price
+        self.quantity = quantity
+
+    def calculate_total(self):
+        total = self.price * self.quantity
+        return total
+
+    @staticmethod
+    def apply_discount(total_amount):
+        if total_amount >= 5000:
+            discount = total_amount * 10 / 100
+            return total_amount - discount
+        else:
+            return total_amount
+
+    def display_order(self):
+        total = self.calculate_total()
+        final_amount = ShoppingCart.apply_discount(total)
+
+        print("\n------ SHOPPING ORDER DETAILS ------")
+        print(f"Customer Name: {self.customer_name}")
+        print(f"Product Name: {self.product_name}")
+        print(f"Price: {self.price}")
+        print(f"Quantity: {self.quantity}")
+        print(f"Total Amount: {total}")
+        print(f"Final Amount: {final_amount}")
+
+
+s1 = ShoppingCart("Som", "Laptop", 60000, 1)
+s1.display_order()
+
+#Output-->
+# ------ SHOPPING ORDER DETAILS ------
+# Customer Name: Som
+# Product Name: Laptop
+# Price: 60000
+# Quantity: 1
+# Total Amount: 60000
+# Final Amount: 54000.0
+
+        
