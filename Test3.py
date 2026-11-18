@@ -193,51 +193,94 @@
 
 #Q5
 
-class ElectricityBill:
-    def __init__(self, customer_name, meter_name, units_consumed):
-        self.customer_name = customer_name
-        self.meter_name = meter_name
-        self.units_consumed = units_consumed
+# class ElectricityBill:
+#     def __init__(self, customer_name, meter_name, units_consumed):
+#         self.customer_name = customer_name
+#         self.meter_name = meter_name
+#         self.units_consumed = units_consumed
 
-    @staticmethod
-    def validate_units(units):
-        return units >= 0
+#     @staticmethod
+#     def validate_units(units):
+#         return units >= 0
 
-    def calculate_bill(self):
-        units = self.units_consumed
+#     def calculate_bill(self):
+#         units = self.units_consumed
 
-        if not ElectricityBill.validate_units(units):
-            return "Invalid Units"
+#         if not ElectricityBill.validate_units(units):
+#             return "Invalid Units"
 
-        if units <= 100:
-            bill = units * 2
+#         if units <= 100:
+#             bill = units * 2
 
-        elif units <= 200:
-            bill = (100 * 2) + ((units - 100) * 3)
+#         elif units <= 200:
+#             bill = (100 * 2) + ((units - 100) * 3)
 
-        else:
-            bill = (100 * 2) + (100 * 3) + ((units - 200) * 5)
+#         else:
+#             bill = (100 * 2) + (100 * 3) + ((units - 200) * 5)
 
-        return bill
+#         return bill
 
-    def display_bill(self):
-        print("\n------ ELECTRICITY BILL ------")
-        print(f"Customer Name: {self.customer_name}")
-        print(f"Meter Name: {self.meter_name}")
-        print(f"Units Consumed: {self.units_consumed}")
-        print(f"Total Bill: {self.calculate_bill()}")
+#     def display_bill(self):
+#         print("\n------ ELECTRICITY BILL ------")
+#         print(f"Customer Name: {self.customer_name}")
+#         print(f"Meter Name: {self.meter_name}")
+#         print(f"Units Consumed: {self.units_consumed}")
+#         print(f"Total Bill: {self.calculate_bill()}")
 
 
-e1 = ElectricityBill("Rahul", "MTR101", 250)
-e1.display_bill()
+# e1 = ElectricityBill("Rajesh", "MTR101", 250)
+# e1.display_bill()
 
 #Output-->
 # ------ ELECTRICITY BILL ------
-# Customer Name: Rahul
+# Customer Name: Rajesh
 # Meter Name: MTR101
 # Units Consumed: 250
 # Total Bill: 750
 
+
+#Q6
+
+class MovieTicket:
+    def __init__(self, customer_name, movie_name, ticket_price, number_of_tickets):
+        self.customer_name = customer_name
+        self.movie_name = movie_name
+        self.ticket_price = ticket_price
+        self.number_of_tickets = number_of_tickets
+
+    @staticmethod
+    def check_booking(tickets):
+        return tickets >= 1 and tickets <= 10
+
+    def calculate_total(self):
+        if MovieTicket.check_booking(self.number_of_tickets):
+            total = self.ticket_price * self.number_of_tickets
+            return total
+        else:
+            return "Invalid Booking! Book 1 to 10 tickets only."
+
+    def display_ticket(self):
+        print("\n------ MOVIE TICKET DETAILS ------")
+        print(f"Customer Name: {self.customer_name}")
+        print(f"Movie Name: {self.movie_name}")
+        print(f"Ticket Price: {self.ticket_price}")
+        print(f"Number of Tickets: {self.number_of_tickets}")
+        print(f"Total Amount: {self.calculate_total()}")
+
+
+m1 = MovieTicket("Sai", "Avengers", 200, 3)
+m1.display_ticket()
+
+#Output --->
+# ------ MOVIE TICKET DETAILS ------
+# Customer Name: Sai
+# Movie Name: Avengers
+# Ticket Price: 200
+# Number of Tickets: 3
+# Total Amount: 600
+
+
+        
         
 
         
