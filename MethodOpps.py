@@ -196,4 +196,11 @@ class BankAccount:
 account = BankAccount("Rahul Sharma" , "123456789", 5000)
 account.display()
 account.deposit(2000)
+
+#Output -->
+# --- Account Details ---
+# Account Holder Name : Rahul Sharma
+# Account Number      : 123456789
+# Account Balance     : 5000
+# Updated Balance: 7000
             
