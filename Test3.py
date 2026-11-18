@@ -147,40 +147,40 @@
 
 #Q4 
 
-class ShoppingCart:
-    def __init__(self, customer_name, product_name, price, quantity):
-        self.customer_name = customer_name
-        self.product_name = product_name
-        self.price = price
-        self.quantity = quantity
+# class ShoppingCart:
+#     def __init__(self, customer_name, product_name, price, quantity):
+#         self.customer_name = customer_name
+#         self.product_name = product_name
+#         self.price = price
+#         self.quantity = quantity
 
-    def calculate_total(self):
-        total = self.price * self.quantity
-        return total
+#     def calculate_total(self):
+#         total = self.price * self.quantity
+#         return total
 
-    @staticmethod
-    def apply_discount(total_amount):
-        if total_amount >= 5000:
-            discount = total_amount * 10 / 100
-            return total_amount - discount
-        else:
-            return total_amount
+#     @staticmethod
+#     def apply_discount(total_amount):
+#         if total_amount >= 5000:
+#             discount = total_amount * 10 / 100
+#             return total_amount - discount
+#         else:
+#             return total_amount
 
-    def display_order(self):
-        total = self.calculate_total()
-        final_amount = ShoppingCart.apply_discount(total)
+#     def display_order(self):
+#         total = self.calculate_total()
+#         final_amount = ShoppingCart.apply_discount(total)
 
-        print("\n------ SHOPPING ORDER DETAILS ------")
-        print(f"Customer Name: {self.customer_name}")
-        print(f"Product Name: {self.product_name}")
-        print(f"Price: {self.price}")
-        print(f"Quantity: {self.quantity}")
-        print(f"Total Amount: {total}")
-        print(f"Final Amount: {final_amount}")
+#         print("\n------ SHOPPING ORDER DETAILS ------")
+#         print(f"Customer Name: {self.customer_name}")
+#         print(f"Product Name: {self.product_name}")
+#         print(f"Price: {self.price}")
+#         print(f"Quantity: {self.quantity}")
+#         print(f"Total Amount: {total}")
+#         print(f"Final Amount: {final_amount}")
 
 
-s1 = ShoppingCart("Som", "Laptop", 60000, 1)
-s1.display_order()
+# s1 = ShoppingCart("Som", "Laptop", 60000, 1)
+# s1.display_order()
 
 #Output-->
 # ------ SHOPPING ORDER DETAILS ------
@@ -190,5 +190,54 @@ s1.display_order()
 # Quantity: 1
 # Total Amount: 60000
 # Final Amount: 54000.0
+
+#Q5
+
+class ElectricityBill:
+    def __init__(self, customer_name, meter_name, units_consumed):
+        self.customer_name = customer_name
+        self.meter_name = meter_name
+        self.units_consumed = units_consumed
+
+    @staticmethod
+    def validate_units(units):
+        return units >= 0
+
+    def calculate_bill(self):
+        units = self.units_consumed
+
+        if not ElectricityBill.validate_units(units):
+            return "Invalid Units"
+
+        if units <= 100:
+            bill = units * 2
+
+        elif units <= 200:
+            bill = (100 * 2) + ((units - 100) * 3)
+
+        else:
+            bill = (100 * 2) + (100 * 3) + ((units - 200) * 5)
+
+        return bill
+
+    def display_bill(self):
+        print("\n------ ELECTRICITY BILL ------")
+        print(f"Customer Name: {self.customer_name}")
+        print(f"Meter Name: {self.meter_name}")
+        print(f"Units Consumed: {self.units_consumed}")
+        print(f"Total Bill: {self.calculate_bill()}")
+
+
+e1 = ElectricityBill("Rahul", "MTR101", 250)
+e1.display_bill()
+
+#Output-->
+# ------ ELECTRICITY BILL ------
+# Customer Name: Rahul
+# Meter Name: MTR101
+# Units Consumed: 250
+# Total Bill: 750
+
+        
 
         
