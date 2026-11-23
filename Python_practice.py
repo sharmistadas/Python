@@ -1,10 +1,3 @@
-"""
-=====================================================================
- PYTHON PRACTICE SHEET: BASICS TO OOP (Scenario-Based)
- 5 questions per topic | Write your solution under each question
-=====================================================================
- Tip: Do them in order. Don't look up answers until you've tried 15 min.
-"""
 
 # =====================================================================
 # TOPIC 1: VARIABLES, DATA TYPES & INPUT/OUTPUT
@@ -13,6 +6,15 @@
 # Q1.1 (Billing) A shop sells a pen for 12.5 and a notebook for 45.
 #      Store the prices in variables, and print the total cost for
 #      3 pens and 2 notebooks in the format: "Total bill: Rs. xxx"
+
+pen_price=12.5
+notebook_price=45
+total=(3*pen_price+2*notebook_price)
+print(f"Total bill: Rs.{total}")
+
+#Output--->
+# Total bill: Rs.127.5
+
 
 # Q1.2 (Profile Card) Take name, age and city as input from the user.
 #      Print: "Hi <name>, you are <age> years old and live in <city>."
