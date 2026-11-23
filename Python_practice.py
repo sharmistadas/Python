@@ -7,10 +7,10 @@
 #      Store the prices in variables, and print the total cost for
 #      3 pens and 2 notebooks in the format: "Total bill: Rs. xxx"
 
-# pen_price=12.5
-# notebook_price=45
-# total=(3*pen_price+2*notebook_price)
-# print(f"Total bill: Rs.{total}")
+pen_price=12.5
+notebook_price=45
+total=(3*pen_price+2*notebook_price)
+print(f"Total bill: Rs.{total}")
 
 #Output--->
 # Total bill: Rs.127.5
@@ -20,9 +20,9 @@
 #      Print: "Hi <name>, you are <age> years old and live in <city>."
 #      Next year's age should also be printed.
 
-name="Rojalin"
-age=25
-city="Hyd"
+name = input("Enter your name: ")
+age = int(input("Enter your age: "))
+city = input("Enter your city: ")
 next_year_age=(1+age)
 print(f"Hi {name}")
 print(f"Your are {age} years old")
@@ -39,12 +39,65 @@ print(f"Next year's age: {next_year_age}")
 # Q1.3 (Type Check) Create variables of type int, float, str, bool and
 #      None. Print each value along with its type using type().
 
+a=100 
+b=25.5
+c="Sharmistha"
+d=True
+e=None
+print(f"a {type(a)}")
+print(f"b {type(b)}")
+print(f"c {type(c)}")
+print(f"d {type(d)}")
+print(f"e {type(e)}")
+
+#Output--->
+# a <class 'int'>
+# b <class 'float'>
+# c <class 'str'>
+# d <class 'bool'>
+# e <class 'NoneType'>
+
 # Q1.4 (Temperature) Take a temperature in Celsius from the user and
 #      convert it to Fahrenheit and Kelvin. Round to 2 decimals.
+
+Celsius=float(input("Enter temperature in Celsius:"))
+fahrenheit = (Celsius * 9/5) + 32
+kelvin = Celsius + 273.15
+
+print(f"Temperature in Fahrenheit: {round(fahrenheit, 2)} °F")
+print(f"Temperature in Kelvin: {round(kelvin, 2)} K")
+
+# output-->
+# Enter temperature in Celsius:25
+# Temperature in Fahrenheit: 77.0 °F
+# Temperature in Kelvin: 298.15 K
 
 # Q1.5 (Swap) You have two cups: tea in cup1 and coffee in cup2.
 #      Swap the contents WITHOUT using a third variable (two ways).
 
+
+cup1 = "Tea"
+cup2 = "Coffee"
+
+print("Before Swapping:")
+print("Cup 1:", cup1)
+print("Cup 2:", cup2)
+
+cup1 = cup1 + cup2
+cup2 = cup1.replace(cup2, "")
+cup1 = cup1.replace(cup2, "")
+
+print("\nAfter Swapping:")
+print("Cup 1:", cup1)
+print("Cup 2:", cup2)
+
+#Output-->
+# Before Swapping:
+# Cup 1: Tea
+# Cup 2: Coffee
+# After Swapping:
+# Cup 1: Coffee
+# Cup 2: Tea
 
 # =====================================================================
 # TOPIC 2: OPERATORS
