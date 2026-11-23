@@ -7,10 +7,10 @@
 #      Store the prices in variables, and print the total cost for
 #      3 pens and 2 notebooks in the format: "Total bill: Rs. xxx"
 
-pen_price=12.5
-notebook_price=45
-total=(3*pen_price+2*notebook_price)
-print(f"Total bill: Rs.{total}")
+# pen_price=12.5
+# notebook_price=45
+# total=(3*pen_price+2*notebook_price)
+# print(f"Total bill: Rs.{total}")
 
 #Output--->
 # Total bill: Rs.127.5
@@ -19,6 +19,22 @@ print(f"Total bill: Rs.{total}")
 # Q1.2 (Profile Card) Take name, age and city as input from the user.
 #      Print: "Hi <name>, you are <age> years old and live in <city>."
 #      Next year's age should also be printed.
+
+name="Rojalin"
+age=25
+city="Hyd"
+next_year_age=(1+age)
+print(f"Hi {name}")
+print(f"Your are {age} years old")
+print(f"Live in {city}")
+print(f"Next year's age: {next_year_age}")
+
+#Output-->
+# Hi Rojalin
+# Your are 25 years old
+# Live in Hyd
+# Next year's age: 26
+
 
 # Q1.3 (Type Check) Create variables of type int, float, str, bool and
 #      None. Print each value along with its type using type().
