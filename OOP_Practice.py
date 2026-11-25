@@ -1,6 +1,9 @@
 
-
 # Q1. Employee Salary (Inheritance)
+# Create a parent class Employee and a child class PermanentEmployee.
+# - Employee has name and basic salary.
+# - PermanentEmployee has an additional bonus.
+# - Calculate and display the total salary.
 
 class Employee:
     def __init__(self, name, basic_salary):
@@ -23,6 +26,10 @@ print("Q1:", e.name, "Total Salary:", e.total_salary())
 
 
 # Q2. Product Details (Inheritance)
+# Create a parent class Product and a child class Mobile.
+# - Product has product name and price.
+# - Mobile has an additional warranty period.
+# - Display all product details.
 
 class Product:
     def __init__(self, name, price):
@@ -45,6 +52,10 @@ m.display()
 
 
 # Q3. Payment System (Polymorphism)
+# Create two classes CashPayment and CardPayment.
+# - Both classes must have a pay() method.
+# - Cash payment and card payment should have different implementations.
+# - Create objects and demonstrate polymorphism.
 
 class CashPayment:
     def pay(self, amount):
@@ -63,6 +74,11 @@ for payment in (CashPayment(), CardPayment()):
 
 
 # Q4. Area of Shapes (Polymorphism)
+# Create two classes Rectangle and Circle.
+# - Rectangle requires length and breadth.
+# - Circle requires radius.
+# - Both classes must have a calculate_area() method.
+# - Display the area of each shape.
 
 class Rectangle:
     def __init__(self, length, breadth):
@@ -88,6 +104,12 @@ for shape in (Rectangle(10, 5), Circle(7)):
 
 
 # Q5. Bank Account (Encapsulation)
+# Create a class BankAccount.
+# - Create a private attribute balance.
+# - Use the @property decorator to read the balance.
+# - Create a setter that rejects negative values.
+# - Include deposit and withdrawal methods.
+# - Display the updated balance.
 
 class BankAccount:
     def __init__(self, balance):
@@ -124,6 +146,12 @@ print("Q5: Balance:", b.balance)
 
 
 # Q6. Student Marks (Encapsulation)
+# Create a class Student.
+# - Create a private attribute marks.
+# - Use a property getter and setter.
+# - Marks must be between 0 and 100.
+# - Invalid marks should not update the existing marks.
+# - Display the student's marks.
 
 class Student:
     def __init__(self, marks):
@@ -151,6 +179,11 @@ print("Q6: Marks:", s.marks)
 
 
 # Q7. Employee Attendance (Abstraction)
+# Create an abstract class Employee.
+# - Declare an abstract method mark_attendance().
+# - Create child classes OfficeEmployee and RemoteEmployee.
+# - Implement the attendance method differently in each child class.
+# - Display the attendance details.
 
 from abc import ABC, abstractmethod
 
@@ -176,7 +209,13 @@ RemoteEmployee().mark_attendance()
 
 
 # Q8. Uber Ride Fare (Inheritance + Constructor Chaining)
-
+# Create a parent class Ride and child classes BikeRide and CarRide.
+# - Ride has passenger name and distance travelled.
+# - BikeRide fare is ₹10 per kilometre.
+# - CarRide fare is ₹20 per kilometre.
+# - Use constructor chaining with super() to initialize passenger name and distance.
+# - Calculate and display the fare for each ride.
+    
 class Ride:
     def __init__(self, passenger, distance):
         self.passenger = passenger
