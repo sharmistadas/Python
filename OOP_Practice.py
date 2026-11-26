@@ -21,8 +21,10 @@ class PermanentEmployee(Employee):
 e = PermanentEmployee("Ravi", 30000, 5000)
 print("Q1:", e.name, "Total Salary:", e.total_salary())
 
+
 # Output:
 # Q1: Ravi Total Salary: 35000
+
 
 
 # Q2. Product Details (Inheritance)
@@ -51,6 +53,7 @@ m.display()
 # Q2: Samsung 20000 2 years
 
 
+
 # Q3. Payment System (Polymorphism)
 # Create two classes CashPayment and CardPayment.
 # - Both classes must have a pay() method.
@@ -71,6 +74,8 @@ for payment in (CashPayment(), CardPayment()):
 # Output:
 # Q3: Cash payment: 1000
 # Q3: Card payment: 1000
+
+
 
 
 # Q4. Area of Shapes (Polymorphism)
