@@ -3,6 +3,7 @@
 # TOPIC 1: VARIABLES, DATA TYPES & INPUT/OUTPUT
 # =====================================================================
 
+
 # Q1.1 (Billing) A shop sells a pen for 12.5 and a notebook for 45.
 #      Store the prices in variables, and print the total cost for
 #      3 pens and 2 notebooks in the format: "Total bill: Rs. xxx"
@@ -57,6 +58,8 @@ print(f"e {type(e)}")
 # d <class 'bool'>
 # e <class 'NoneType'>
 
+
+
 # Q1.4 (Temperature) Take a temperature in Celsius from the user and
 #      convert it to Fahrenheit and Kelvin. Round to 2 decimals.
 
@@ -91,6 +94,7 @@ print("\nAfter Swapping:")
 print("Cup 1:", cup1)
 print("Cup 2:", cup2)
 
+
 #Output-->
 # Before Swapping:
 # Cup 1: Tea
@@ -98,6 +102,8 @@ print("Cup 2:", cup2)
 # After Swapping:
 # Cup 1: Coffee
 # Cup 2: Tea
+
+
 
 # =====================================================================
 # TOPIC 2: OPERATORS
