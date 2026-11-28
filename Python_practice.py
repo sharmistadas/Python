@@ -8,6 +8,7 @@
 #      Store the prices in variables, and print the total cost for
 #      3 pens and 2 notebooks in the format: "Total bill: Rs. xxx"
 
+
 pen_price=12.5
 notebook_price=45
 total=(3*pen_price+2*notebook_price)
@@ -17,9 +18,11 @@ print(f"Total bill: Rs.{total}")
 # Total bill: Rs.127.5
 
 
+
 # Q1.2 (Profile Card) Take name, age and city as input from the user.
 #      Print: "Hi <name>, you are <age> years old and live in <city>."
 #      Next year's age should also be printed.
+
 
 name = input("Enter your name: ")
 age = int(input("Enter your age: "))
@@ -50,6 +53,7 @@ print(f"b {type(b)}")
 print(f"c {type(c)}")
 print(f"d {type(d)}")
 print(f"e {type(e)}")
+
 
 #Output--->
 # a <class 'int'>
